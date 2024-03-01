@@ -88,6 +88,9 @@
 \solution
 
 \input{tables/table.tex}
+\begin{enumerate}
+    \item 
+
 Let the curret in load be I
 
 \begin{center}
@@ -97,12 +100,14 @@ Let the curret in load be I
      &=\sqrt{2}(1-j)
 \end{align}
 \end{center}
+\item
 voltage at attenuator 
 \begin{align}
     V_1&=V_sA_1\\
     &=230\frac{1}{50\sqrt{2}}V\\
     &=\frac{4.6}{\sqrt{2}}V
 \end{align}
+
 \begin{center}
     \begin{align}
         V_y&=4.6\sin(\omega t+90^\circ)\\
@@ -110,7 +115,16 @@ voltage at attenuator
         &=2\sqrt{2}\sin(\omega t-45^\circ)\\
         V_0&=9.2\sqrt{2}(\frac{\cos(135)-\cos(2\omega t)}{2})\\
         &=4.6-4.6\sqrt{2}\cos(2\omega t)\\
-        V_0<avg>&=4.6
     \end{align}
 \end{center}
+
+\item 
+Let f(t)= $4.6-4.6\sqrt{2}\cos(2\omega t)$
+\begin{align}
+    V_o<avg>&=\frac{1}{T}\int_{0}^{T}(4.6-4.6\sqrt{2}\cos(2\omega t))\,dt\\
+    &=\frac{\omega}{\pi} \left[\int_{0}^{\frac{\pi}{\omega}}4.6\,dt-4.6\sqrt{2}\int_{0}^{\frac{\pi}{\omega}}\cos(2\omega t)\,dt\right]\\
+    &=\frac{\omega}{\pi}\left[4.6\frac{\pi}{\omega}-4.6\sqrt{2}\left[\frac{\sin(2\pi )}{2\omega}\right]\right]\\
+    &=4.6
+\end{align}
+\end{enumerate}
 \end{document}
